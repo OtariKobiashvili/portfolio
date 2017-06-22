@@ -1,8 +1,9 @@
 <% include partials/header%>
+
   	<div class = "jumbotron text-center">
 
 		<div class = "hero-text">
-			<h1>Hi, I'm Otari. I am</h1>
+			<h1>Hi, I'm Otari. I'm</h1>
 			<h2 id = "hero-message">a web developer.</h2>
 		</div>
 
@@ -13,9 +14,9 @@
     </div>
 
     <div class = "learn-scroll">
-      <a href="">
+      <a href="#about">
         <p>Learn more about what I do</p>
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        <i id = "about" class="fa fa-chevron-down" aria-hidden="true"></i>
       </a>
     </div>
 
@@ -23,58 +24,161 @@
 
 	<div class = "container">
 
-		<section id = "about">
+		<section class = "about">
 			<h1 class = "section-title">About Me</h1>
-			<p>Lorem ipsum dolor sit amet, omnesque recteque efficiantur no mel, in vim integre explicari contentiones. Est an molestiae gubergren, mea ne sonet soluta nonumes. Pri ne tota diceret concludaturque. Est ea dicit graeco eloquentiam, in reque persecuti est. Id indoctum salutatus mel. Usu debet adolescens ex, primis ocurreret et sit.</p>
-			<p>Utroque argumentum vim no. Alii possit ut ius, in lorem regione copiosae nec. Altera posidonium vel ne, dicunt intellegebat ne mea. Singulis oportere et pro. Et enim inimicus eloquentiam vel.</p>
+			<p>Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot. My text is long and beautiful, as, it has been well documented, are various other parts of my website.</p>
+			<p>I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? The other thing with Lorem Ipsum is that you have to take out its family.</p>
 		</section>
 
 	</div>
 
-			<section class = "skills">
-				<h1 class = "skill-title">Skills</h1>
-        <div class = "skill-logos container">
+  <section class = "skills">
+    <h1 class = "skill-title">Skills</h1>
+    <div class = "skill-logos container">
 
+      <div class = "row">
+
+        <div class ="col-sm-6 col-md-3 type front">
+          <h3>Front-End</h3>
+          <hr>
+            <i class="skill devicon-html5-plain-wordmark colored"></i>
+            <i class="skill devicon-css3-plain-wordmark colored"></i>
+            <i class="skill devicon-bootstrap-plain-wordmark colored"></i>
+            <i class="skill devicon-javascript-plain colored"></i>
+            <i class="skill devicon-jquery-plain-wordmark colored"></i>
+        </div>
+
+        <div class ="col-sm-6 col-md-3 type back">
+          <h3>Back-End</h3>
+          <hr>
+            <i class="skill devicon-nodejs-plain-wordmark colored"></i>
+            <i class="skill devicon-express-original-wordmark"></i>
+            <i class="skill devicon-mongodb-plain-wordmark colored"></i>
+        </div>
+
+        <div class ="col-sm-6 col-md-3 type tools">
+          <h3>Tools</h3>
+          <hr>
+            <i class="skill devicon-git-plain-wordmark colored"></i>
+            <i class="skill devicon-github-plain-wordmark"></i>
+            <i class="skill devicon-visualstudio-plain colored"></i>
+            <i class="skill devicon-chrome-plain-wordmark colored"></i>
+        </div>
+
+        <div class ="col-sm-6 col-md-3 type learning">
+          <h3>Learning</h3>
+          <hr>
+            <i class="skill devicon-react-original-wordmark colored"></i>
+            <i class="skill devicon-mysql-plain colored"></i>
+            <i class="skill devicon-postgresql-plain-wordmark colored"></i>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class = "portfolio">
+    <h1>Portfolio</h1>
+  </section>
+
+  <section class = "contact">
+    <h1>Contact</h1>
+    <div class = "container">
+
+      <div id="myForm" class="form-wrapper">
+        <a href="javascript:void(0)" class="form-close-btn">&times;</a>
+        <div class="overlay-content">
           <div class = "row">
-
-            <div class ="col-sm-6 col-md-3 type front">
-              <h3>Front-End</h3>
-              <hr>
-                <i class="skill devicon-html5-plain-wordmark colored"></i>
-                <i class="skill devicon-css3-plain-wordmark colored"></i>
-                <i class="skill devicon-bootstrap-plain-wordmark colored"></i>
-                <i class="skill devicon-javascript-plain colored"></i>
-                <i class="skill devicon-jquery-plain-wordmark colored"></i>
+            <div class = "col-sm-2"></div>
+            <div class = "col-sm-8 form-container">
+              <div class = "static-logo"><span>OK</span></div>
+              <h2>Just a few quick questions.</h2>
+              <p>
+                Lorem Ispum is a choke artist. It chokes! We have
+                so many things that we have to do better...
+                and certainly ipsum is one of them.
+              </p>
+              <form action="https://formspree.io/otarikobi@gmail.com" method="POST">
+                <div class ="row">
+                  <div class = "col-sm-6">
+                    <div class = "form-group">
+                      <input class = "form-control" type="text" name="name" placeholder="Name*" required="required">
+                    </div>
+                    <div class = "form-group">
+                      <input class = "form-control" type="text" name="phone" placeholder="Phone Number">
+                    </div>
+                  </div>
+                  <div class = "col-sm-6">
+                    <div class = "form-group">
+                      <input class = "form-control" type="text" name="email" placeholder="Email*" required="required">
+                    </div>
+                    <div class = "form-group">
+                      <input class = "form-control" type="text" name="company" placeholder="Company">
+                    </div>
+                  </div>
+                  <div class = "col-sm-12">
+                    <div class = "form-group">
+                      <textarea class="form-control" rows="5" name="message" placeholder="I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button class = "btn form-btn btn-md" type="submit">Message me now</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-
-            <div class ="col-sm-6 col-md-3 type back">
-              <h3>Back-End</h3>
-              <hr>
-                <i class="skill devicon-nodejs-plain-wordmark colored"></i>
-                <i class="skill devicon-express-original-wordmark"></i>
-                <i class="skill devicon-mongodb-plain-wordmark colored"></i>
-            </div>
-
-            <div class ="col-sm-6 col-md-3 type tools">
-              <h3>Tools</h3>
-              <hr>
-                <i class="skill devicon-git-plain-wordmark colored"></i>
-                <i class="skill devicon-github-plain-wordmark"></i>
-                <i class="skill devicon-visualstudio-plain colored"></i>
-                <i class="skill devicon-chrome-plain-wordmark colored"></i>
-            </div>
-
-            <div class ="col-sm-6 col-md-3 type learning">
-              <h3>Learning</h3>
-              <hr>
-                <i class="skill devicon-react-original-wordmark colored"></i>
-                <i class="skill devicon-mysql-plain colored"></i>
-                <i class="skill devicon-postgresql-plain-wordmark colored"></i>
-            </div>
-
-
+            <div class = "col-sm-2"></div>
           </div>
         </div>
-			</section>
+      </div>
+
+      <div class = "row">
+        <div class = "col-sm-12 contact-msg">
+          <img class = "img-fluid img-thumbnail" src="/images/profile_img2.jpg" alt="portfoilio_image">
+          <h3>Looking to get in touch?</h3>
+          <p>
+            I am currently actively looking for an opportunity to be a part of a growing organization.
+          </p>
+          <button class = "btn form-btn btn-md">Message me now</button>
+          <div class = "contact-info">
+            <hr>
+            <p>
+              @<strong> Email</strong>
+              <br>
+              For any quick professional or general inquiries please contact me at:
+              <p><a href="">otarikobi@gmail.com</a></p>
+            </p>
+            <hr>
+            <p>
+              <i class="fa fa-users" aria-hidden="true"></i><strong> Connect</strong>
+              <div>
+                <a href="" target="_blank">
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+
+                <a href="" target="_blank">
+                  <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </a>
+
+                <a href="" target="_blank">
+                  <i class="fa fa-codepen" aria-hidden="true"></i>
+                </a>
+
+                <a href="" target="_blank">
+                  <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                </a>
+
+                <a href="" target="_blank">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <% include partials/footer%>
 

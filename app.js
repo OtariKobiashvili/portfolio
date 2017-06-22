@@ -10,5 +10,5 @@ app.get("/", function(req,res){
 })
 
 app.listen("3000", function(){
-  console.log("Portfolio App is running.")
+  console.log("Portfolio App is now running on Port 3000.")
 });

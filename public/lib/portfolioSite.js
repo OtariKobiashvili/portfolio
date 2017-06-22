@@ -7,7 +7,7 @@ window.onload = function(){
 			navbarHeight = getComputedStyle(navbar).height.split('px')[0],
 			jumboHeight = getComputedStyle(jumbotron).height.split('px')[0],
 			windowWidth = document.documentElement.clientWidth,
-			offsetVal = jumboHeight - (navbarHeight / 2);
+			offsetVal = jumboHeight - (navbarHeight);
 
 	function uiChange(){
 		navbar.classList.add("nav-bg")
@@ -38,7 +38,7 @@ window.onload = function(){
 	window.onresize = function(){	//check screen size, if mobile, add primary color, if screen size changes to a large enough px count, fadeout navbar execute as normal
 		var windowWidth = document.documentElement.clientWidth,
 		jumboHeight = getComputedStyle(jumbotron).height.split('px')[0];
-		offsetVal = jumboHeight - (navbarHeight / 2);
+		offsetVal = jumboHeight - (navbarHeight);
 		var scrollTop = document.body.scrollTop;
 		console.log(windowWidth);
 		if(windowWidth < 768){
@@ -67,10 +67,10 @@ window.onload = function(){
 			$("#hero-message").css("color","white");
 		};
 
+//hero message function, text change
 	setInterval(function interval(){
 		var heroMessage = $("#hero-message");
 		var heroMsg = heroMessage.html();
-		console.log(heroMsg)
 		setInterval(function(){
 			heroMessage.css("border-right", "solid 1px white");
 			setTimeout(function(){
@@ -84,7 +84,7 @@ window.onload = function(){
 				textChange();
 				setTimeout(function(){
 					if(heroMsg === "a web developer."){
-						heroMessage.html("a student.")
+						heroMessage.html("a student.");
 					} else if (heroMsg === "a student."){
 						heroMessage.html("self taught.");
 					} else {
@@ -95,4 +95,28 @@ window.onload = function(){
 		},1000)
 
 	},2500)
+//scroll effect 1
+	$(".learn-scroll").on("click", function(){
+		var div = $("#about");
+		var pos = div.offset().top;
+
+		$('html, body').animate({scrollTop:pos},1500);
+	})
+
+	$(".contact-msg .form-btn").on("click", function(){
+		var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
+		$("#myForm").css("width", "100%");
+		$(".sticky-top").css("z-index", "0");
+		if ($(document).height() > $(window).height()) {
+    	$('html').addClass('no-scroll').css('top',-scrollTop);
+		};
+	});
+
+	$(".form-close-btn").on("click", function(){
+		var scrollTop = parseInt($('html').css('top'));
+		$("#myForm").css("width", "0%");
+		$('html').removeClass('no-scroll');
+		$('html,body').scrollTop(-scrollTop);
+		$(".sticky-top").css("z-index","1030");
+	});
 }
