@@ -68,9 +68,15 @@ window.onload = function(){
 		};
 
 	setInterval(function interval(){
-
 		var heroMessage = $("#hero-message");
 		var heroMsg = heroMessage.html();
+		console.log(heroMsg)
+		setInterval(function(){
+			heroMessage.css("border-right", "solid 1px white");
+			setTimeout(function(){
+				heroMessage.css("border-right", "0px");
+			}, 750)
+		},1250)
 		setTimeout(function(){
 			heroMessage.css("background-color","rgba(82, 101, 143,.7)");
 			heroMessage.css("color","black");
@@ -85,8 +91,8 @@ window.onload = function(){
 						heroMessage.html("a web developer.");
 					}
 				},500)
-			},1000)
-		},1500)
+			},750)
+		},1000)
 
 	},2500)
 }

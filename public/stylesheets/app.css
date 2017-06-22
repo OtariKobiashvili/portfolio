@@ -1,6 +1,11 @@
+/*body*/
+
 body {
     -webkit-font-smoothing: antialiased;
 }
+
+/*///////////////NAV BAR/////////////////*/
+
 .navbar {
 	transition: .3s;
 }
@@ -10,6 +15,18 @@ body {
 }
 .nav-col {
 	color: black!important;
+}
+.navbar-inverse .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-toggler-right {
+	top: 19px;
+	cursor: pointer;
+	color: white;
+	border: none;
+}
+.navbar-brand {
+	max-width: 100px;
 }
 #logo {
 	border-radius: 100%;
@@ -30,24 +47,32 @@ body {
 	top: 2px;
 	right: 1px;
 }
+
+/*//////////////////LANDING //////////////////////*/
 .jumbotron {
 	margin-top: -80px;
 	border-radius: 0px;
+	position: relative;
 	background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.7)), url("/images/office.jpg");
-	background-position: center center;
+	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 400px;
+	min-height: 450px;
 	height: 101vh;
 }
 .hero-text {
 	color: white;
 	display: block;
   height: 140px;
-  margin-top: 15%;
+  margin-top: 19.5%;
   transform: translateY(-50%);
 	text-shadow : 1.2px 1.2px black;
+}
+.hero-text h1, .hero-text h2{
+	font-size: 3.15rem;
+	font-weight: 300;
+	line-height: 1.1;
 }
 #hero-message{
 	transition: all .3s ease;
@@ -55,31 +80,40 @@ body {
 	border-radius: 1.5px;
 	margin: 0px;
 }
-.jumbotron a {
-	position: relative;
-	top: 37.5%;
-  transform: translateY(-50%);
-	margin: 0 auto;
+.resume {
 	display: inline-block;
 	background: transparent;
+	margin-top: -35px;
 	border: 2px solid white;
 	border-radius: 40px;
-	font-size: 1.4rem;
-	padding: .7em 1.4em;
+	font-size: 1.1rem;
+	padding: .6em 1.2em;
 }
-.navbar-inverse .navbar-nav .nav-link {
-    color: white;
+.resume:hover {
+	color: black;
+	background: #52658F;
+	border: 2px solid #52658F;
+	padding: .65rem 2.4rem;
 }
-.navbar-toggler-right {
-	top: 19px;
+.learn-scroll {
+	font-size: .95rem;
 	cursor: pointer;
+	margin: 0 auto;
+	max-width: 200px;
+	position: absolute;
+	top: 87%;
+	left: 0;
+	right:0;
+	text-align: center;
+}
+.learn-scroll a {
+	color: rgba(255,255,255,.7);
+}
+.learn-scroll a:hover {
 	color: white;
-	border: none;
 }
-.navbar-brand {
-	max-width: 100px;
-}
-.about {
+/*///////////////// ABOUT ///////////////////*/
+#about {
 	margin: 35px auto;
 	text-align: center;
 	line-height: 40px;
@@ -88,6 +122,9 @@ body {
 .section-title {
 	margin-bottom: 25px;
 }
+
+/*//////////////////////////// SKILLS//////////////////*/
+
 .skills {
 	text-align: center;
 	padding: 5px 0;
@@ -127,9 +164,6 @@ body {
 .skill-title{
 	margin: 30px 0;
 }
-.row{
-	margin: 0;
-}
 .type {
 	margin-bottom: 20px;
 	border-left: 1px solid grey;
@@ -140,16 +174,64 @@ body {
 .type h3{
 	margin-bottom: 15px;
 }
+
+
 @media screen and (max-width: 768px) {
 	.tools{
 		border-left: 0px;
 	}
+	.hero-text {
+		margin-top: 35%;
+	}
+	.hero-text h1, .hero-text h2{
+		font-size: 2.5rem;
+		font-weight: 300;
+		line-height: 1.1;
+	}
 }
 @media screen and (max-width: 575px) {
-	.type{
+	#logo {
+		width: 35px;
+		height: 35px;
+	}
+	.navbar-brand {
+		font-size: .75rem;
+	}
+	.navbar-toggler-right {
+		top: 11px;
+	}
+	.jumbotron {
+		background-attachment: initial;
+		margin-top: -62px;
+	}
+	.resume{
+		margin-top: -140px;
+		font-size:.9rem;
+	}
+	.hero-text {
+			margin-top: 40%;
+	}
+	.hero-text h1, .hero-text h2{
+		font-size: 2.0rem;
+		font-weight: 300;
+		line-height: 1.1;
+	}
+	.type {
 		border-left: 0px;
 	}
 }
+
+@media screen and (max-width: 325px) {
+	.hero-text h1, .hero-text h2{
+		margin-top: 60%;
+	}
+	.resume {
+		margin-top: -50px;
+	}
+}
+
+
+
 
 
 
