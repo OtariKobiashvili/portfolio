@@ -10,9 +10,17 @@ body {
 		left: 0;
 }
 /*///////////////NAV BAR/////////////////*/
-
-.navbar {
+.active {
+	background-color: rgb(82,101,143);
+	border-radius: 4px;
 	transition: .3s;
+}
+.navbar {
+	transition: .3s all ease-in-out;
+	-webkit-transition: 0.3s all ease-in-out;
+	-moz-transition: 0.3s all ease-in-out;
+	-ms-transition: 0.3s all ease-in-out;
+	-o-transition: 0.3s all ease-in-out;
 }
 .nav-bg {
 	background-color: #333a56;
@@ -33,9 +41,16 @@ body {
 .navbar-brand {
 	max-width: 100px;
 }
+.nav-link {
+	padding: .25em 1em;
+}
 .logo {
 	border-radius: 100%;
-	transition: all 0.5s;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: 0.5s all ease-in-out;
+	-moz-transition: 0.5s all ease-in-out;
+	-ms-transition: 0.5s all ease-in-out;
+	-o-transition: 0.5s all ease-in-out;
 	font-size: 1.3em;
 	width: 45px;
 	height: 45px;
@@ -44,8 +59,7 @@ body {
 }
 .logo:hover {
 	transform: scaleY(-1);
-	transition-delay: 0;
-	transition: all 0.5s;
+	transition-delay: 0s;
 }
 .logo-text {
 	position: relative;
@@ -81,6 +95,11 @@ body {
 }
 #hero-message{
 	transition: all .3s ease;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	position: relative;
 	display: inline-block;
 	border-radius: 1.5px;
 	margin: 0px;
@@ -203,12 +222,17 @@ body {
 	width: 0;
 	position: fixed;
 	overflow-y: auto;
+	overflow-x: hidden;
 	z-index: 1;
 	top: 0;
 	left: 0;
 	background-color: rgb(0,0,0);
 	background-color: rgb(82,101,143);
-	transition: 0.5s;
+	transition: 0.4s all ease-in-out;
+	-webkit-transition: 0.4s all ease-in-out;
+	-moz-transition: 0.4s all ease-in-out;
+	-ms-transition: 0.4s all ease-in-out;
+	-o-transition: 0.4s all ease-in-out;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -248,12 +272,15 @@ body {
 }
 .form-control:focus {
 	background: transparent;
-	border: 2px solid white;
+	border: 2px solid #333A56;
 	color: #fff;
 }
 .form-group .form-btn {
 	color: white;
 	border: 2px solid white;
+}
+.form-group .form-btn:hover {
+	color: white;
 }
 input::-webkit-input-placeholder {
 	color: rgba(255,255,255,0.7) !important;
@@ -324,6 +351,10 @@ textarea:-ms-input-placeholder {
 .contact-info a i:hover {
 	color: #333a56;
 	transition: .1s ease-in-out;
+	-webkit-transition: 0.1s all ease-in-out;
+	-moz-transition: 0.1s all ease-in-out;
+	-ms-transition: 0.1s all ease-in-out;
+	-o-transition: 0.1s all ease-in-out;
 }
 /*//////////////////FOOTER/////////////////*/
 footer {
