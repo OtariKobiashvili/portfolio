@@ -11,8 +11,8 @@ window.onload = function(){
 
 	function uiChange(){
 		navbar.classList.add("nav-bg")
-		$("#logo").css("color","#F7F5E6");
-		$("#logo").css("border","2px solid #F7F5E6");
+		$(".logo").css("color","#F7F5E6");
+		$(".logo").css("border","2px solid #F7F5E6");
 		$(".navbar-inverse .navbar-nav .nav-link").css("color","#F7F5E6");
 		$(".navbar-inverse .navbar-nav .nav-link").hover(function(){
 			$(this).css("color","rgba(247, 245, 230,.75)");
@@ -22,13 +22,14 @@ window.onload = function(){
 	};
 	function uiReset(){
 		navbar.classList.remove("nav-bg")
-		$("#logo").css("color","white");
-		$("#logo").css("border","2px solid white");
+		$(".logo").css("color","white");
+		$(".logo").css("border","2px solid white");
 		$(".navbar-inverse .navbar-nav .nav-link").css("color","white");
 		$(".navbar-inverse .navbar-nav .nav-link").hover(function(){
 			$(this).css("color","rgba(255, 255, 255,.75)");
 		},function(){
 			$(this).css("color","white");
+
 		})
 	};
 	if(windowWidth < 768){	// if page loads as mobile add primary color;
@@ -37,10 +38,10 @@ window.onload = function(){
 
 	window.onresize = function(){	//check screen size, if mobile, add primary color, if screen size changes to a large enough px count, fadeout navbar execute as normal
 		var windowWidth = document.documentElement.clientWidth,
-		jumboHeight = getComputedStyle(jumbotron).height.split('px')[0];
-		offsetVal = jumboHeight - (navbarHeight);
-		var scrollTop = document.body.scrollTop;
-		console.log(windowWidth);
+				jumboHeight = getComputedStyle(jumbotron).height.split('px')[0],
+				offsetVal = jumboHeight - (navbarHeight),
+				scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
 		if(windowWidth < 768){
 			uiChange();
 		} else if(scrollTop <= offsetVal && windowWidth > 768) {
@@ -49,8 +50,38 @@ window.onload = function(){
 	};
 
 	function navChange(){
-		var scrollTop = document.body.scrollTop,
-		windowWidth = document.documentElement.clientWidth;//check to see if user is mobile, disable navbar fadein
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+				windowWidth = document.documentElement.clientWidth,//check to see if user is mobile, disable navbar fadein
+				aboutHeight = $(".about .section-title").offset().top - 55,//.about margin
+				skillsHeight = $(".skills .skill-title").offset().top - 30,
+				portfHeight = $(".portfolio .portf-title").offset().top - 30,
+				contactHeight = $(".contact .contact-title").offset().top - 30;
+
+		if($(".navbar").hasClass("nav-bg")){
+			if( scrollTop > aboutHeight){
+				$("#about-nav").addClass("active");
+			} else {
+				$("#about-nav").removeClass("active");
+			};
+			if(scrollTop > skillsHeight){
+				$(".nav-link").removeClass("active");
+				$("#skills-nav").addClass("active");
+			} else{
+				$("#skills-nav").removeClass("active");
+			};
+			if(scrollTop > portfHeight){
+				$(".nav-link").removeClass("active");
+				$("#portf-nav").addClass("active");
+			} else{
+				$("#portf-nav").removeClass("active");
+			};
+			if(scrollTop > contactHeight){
+				$(".nav-link").removeClass("active");
+				$("#contact-nav").addClass("active");
+			} else{
+				$("#contact-nav").removeClass("active");
+			};
+		}
 
 		if (scrollTop >= offsetVal && windowWidth > 768) {
 			uiChange();
@@ -67,16 +98,16 @@ window.onload = function(){
 			$("#hero-message").css("color","white");
 		};
 
-//hero message function, text change
+	//hero message function, text change
 	setInterval(function interval(){
 		var heroMessage = $("#hero-message");
 		var heroMsg = heroMessage.html();
-		setInterval(function(){
-			heroMessage.css("border-right", "solid 1px white");
-			setTimeout(function(){
-				heroMessage.css("border-right", "0px");
-			}, 750)
-		},1250)
+		// setInterval(function(){
+		// 	heroMessage.css("border-right", "solid 1px white");
+		// 	setTimeout(function(){
+		// 		heroMessage.css("border-right", "0px");
+		// 	}, 750)
+		// },1250)
 		setTimeout(function(){
 			heroMessage.css("background-color","rgba(82, 101, 143,.7)");
 			heroMessage.css("color","black");
@@ -95,10 +126,24 @@ window.onload = function(){
 		},1000)
 
 	},2500)
-//scroll effect 1
+	//scroll effect 1
 	$(".learn-scroll").on("click", function(){
-		var div = $("#about");
-		var pos = div.offset().top;
+		var div = $("#about"),
+				pos = div.offset().top;
+
+		$('html, body').animate({scrollTop:pos},1500);
+	});
+
+	$(".nav-link").on("click", function(){
+		var navVal = $(this).text().toLowerCase(),
+				navDiv = $("#" + navVal),
+				pos;
+
+		if (navVal === "about"){
+			pos =  navDiv.offset().top;
+		} else {
+			pos =	navDiv.offset().top + 25;
+		}
 
 		$('html, body').animate({scrollTop:pos},1500);
 	})
@@ -120,3 +165,5 @@ window.onload = function(){
 		$(".sticky-top").css("z-index","1030");
 	});
 }
+
+
