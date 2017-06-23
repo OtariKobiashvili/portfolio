@@ -387,7 +387,11 @@ footer p{
 	top: 3px;
 	right: 1px;
 }
-
+@media screen and (min-width: 991px){
+	.form-group textarea {
+		max-width: 65%;
+	}
+}
 @media screen and (max-width: 768px) {
 	.tools{
 		border-left: 0px;
