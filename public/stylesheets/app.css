@@ -42,7 +42,7 @@ body {
 	max-width: 100px;
 }
 .nav-link {
-	padding: .25em 1em;
+	padding: .20em 1em;
 }
 .logo {
 	border-radius: 100%;
@@ -254,7 +254,7 @@ body {
 	margin: 0 auto;
   padding: 44px 0 40px 0;
 }
-.form-container h2{
+.form-container h1{
 	color: white;
 	margin-bottom: 20px;
 }
@@ -268,12 +268,17 @@ body {
 	background: transparent;
 	border: 2px solid white;
 	color: #fff;
-	font-size: .9rem;
+	font-size: .8rem;
+	max-width: 99%;
+	margin: 0 auto;
 }
 .form-control:focus {
 	background: transparent;
 	border: 2px solid #333A56;
 	color: #fff;
+}
+.form-group textarea {
+	max-width: 82%;
 }
 .form-group .form-btn {
 	color: white;
@@ -349,7 +354,7 @@ textarea:-ms-input-placeholder {
 	text-decoration: none;
 }
 .contact-info a i:hover {
-	color: #333a56;
+	color: rgb(82,101,143);
 	transition: .1s ease-in-out;
 	-webkit-transition: 0.1s all ease-in-out;
 	-moz-transition: 0.1s all ease-in-out;
@@ -433,6 +438,9 @@ footer p{
 	.contact-info {
 		margin-top: 35px;
 	}
+.form-group textarea {
+	max-width: 100%;
+}
 }
 
 @media screen and (max-width: 325px) {
