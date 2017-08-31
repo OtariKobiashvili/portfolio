@@ -1,6 +1,13 @@
-'use strict'
+'use strict';
+window.onbeforeunload = function () {
+	window.scrollTo(0, 0);
+};
 
 window.onload = function(){
+
+
+	$('body').css('display', 'none');
+	$('body').fadeIn(1500);
 
 	var navbar = document.querySelector(".navbar"),
 			jumbotron = document.querySelector(".jumbotron"),
@@ -10,7 +17,7 @@ window.onload = function(){
 			offsetVal = jumboHeight - (navbarHeight);
 
 	function uiChange(){
-		navbar.classList.add("nav-bg")
+		navbar.classList.add("nav-bg");
 		$(".logo").css("color","#F7F5E6");
 		$(".logo").css("border","2px solid #F7F5E6");
 		$(".navbar-inverse .navbar-nav .nav-link").css("color","#F7F5E6");
@@ -18,10 +25,10 @@ window.onload = function(){
 			$(this).css("color","rgba(247, 245, 230,.75)");
 		},function(){
 			$(this).css("color","#F7F5E6");
-		})
+		});
 	};
 	function uiReset(){
-		navbar.classList.remove("nav-bg")
+		navbar.classList.remove("nav-bg");
 		$(".logo").css("color","white");
 		$(".logo").css("border","2px solid white");
 		$(".navbar-inverse .navbar-nav .nav-link").css("color","white");
@@ -30,7 +37,7 @@ window.onload = function(){
 		},function(){
 			$(this).css("color","white");
 
-		})
+		});
 	};
 	if(windowWidth < 768){	// if page loads as mobile add primary color;
 		uiChange();
@@ -45,7 +52,7 @@ window.onload = function(){
 		if(windowWidth < 768){
 			uiChange();
 		} else if(scrollTop <= offsetVal && windowWidth > 768) {
-			uiReset()
+			uiReset();
 		}
 	};
 
@@ -92,40 +99,15 @@ window.onload = function(){
 
 	window.addEventListener('scroll', navChange, false);// will only fire if screen size is 991 px or larger(larger than possible mobile devices)
 
-		function textChange(){
-			$("#hero-message").html("      ");
-			$("#hero-message").css("background","none");
-			$("#hero-message").css("color","white");
-		};
-
-	//hero message function, text change
-	setInterval(function interval(){
-		var heroMessage = $("#hero-message");
-		var heroMsg = heroMessage.html();
-		// setInterval(function(){
-		// 	heroMessage.css("border-right", "solid 1px white");
-		// 	setTimeout(function(){
-		// 		heroMessage.css("border-right", "0px");
-		// 	}, 750)
-		// },1250)
-		setTimeout(function(){
-			heroMessage.css("background-color","rgba(82, 101, 143,.7)");
-			heroMessage.css("color","black");
-			setTimeout(function(){
-				textChange();
-				setTimeout(function(){
-					if(heroMsg === "a web developer."){
-						heroMessage.html("a student.");
-					} else if (heroMsg === "a student."){
-						heroMessage.html("self taught.");
-					} else {
-						heroMessage.html("a web developer.");
-					}
-				},500)
-			},750)
-		},1000)
-
-	},2500)
+	var typed = new Typed("#hero-message span", {
+		strings: ["I'm a web developer.", "I'm self-taught."],
+		typeSpeed: 90,
+		backSpeed: 50,
+		backDelay: 1000,
+		smartBackspace: true,
+		loop: true,
+		loopCount: false
+	});
 	//scroll effect 1
 	$(".learn-scroll").on("click", function(){
 		var div = $("#about"),
@@ -146,7 +128,7 @@ window.onload = function(){
 		}
 
 		$('html, body').animate({scrollTop:pos},1500);
-	})
+	});
 
 	$(".contact-msg .form-btn").on("click", function(){
 		var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
@@ -164,6 +146,21 @@ window.onload = function(){
 		$('html,body').scrollTop(-scrollTop);
 		$(".sticky-top").css("z-index","1030");
 	});
-}
+
+	$(".card-flip").on("click", function() {
+		var card = $(this).closest(".card-container");
+		console.log(card);
+		if(card.hasClass("hover")){
+			card.removeClass("hover");
+		} else {
+			card.addClass("hover");
+		}
+	});
+	// $(".proj-image").hover(function(){
+	// 	$(this).find($(".btn-container")).css("height", "100%");
+	// }, function(){
+	// 	$(".btn-container").css("height", "0");
+	// });
+};
 
 
