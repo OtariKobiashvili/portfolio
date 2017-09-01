@@ -5,7 +5,6 @@ window.onbeforeunload = function () {
 
 window.onload = function(){
 
-
 	$('body').css('display', 'none');
 	$('body').fadeIn(1500);
 
@@ -27,6 +26,7 @@ window.onload = function(){
 			$(this).css("color","#F7F5E6");
 		});
 	};
+
 	function uiReset(){
 		navbar.classList.remove("nav-bg");
 		$(".logo").css("color","white");
@@ -99,6 +99,7 @@ window.onload = function(){
 
 	window.addEventListener('scroll', navChange, false);// will only fire if screen size is 991 px or larger(larger than possible mobile devices)
 
+	//typing effect on hero message
 	var typed = new Typed("#hero-message span", {
 		strings: ["I'm a web developer.", "I'm self-taught."],
 		typeSpeed: 90,
@@ -108,6 +109,7 @@ window.onload = function(){
 		loop: true,
 		loopCount: false
 	});
+
 	//scroll effect 1
 	$(".learn-scroll").on("click", function(){
 		var div = $("#about"),
@@ -156,11 +158,7 @@ window.onload = function(){
 			card.addClass("hover");
 		}
 	});
-	// $(".proj-image").hover(function(){
-	// 	$(this).find($(".btn-container")).css("height", "100%");
-	// }, function(){
-	// 	$(".btn-container").css("height", "0");
-	// });
+
 };
 
 
