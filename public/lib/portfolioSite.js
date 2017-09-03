@@ -132,7 +132,7 @@ window.onload = function(){
 		$('html, body').animate({scrollTop:pos},1500);
 	});
 
-	$(".contact-msg .form-btn").on("click", function(){
+	$("#form-btn").on("click", function(){
 		var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
 		$("#myForm").css("width", "100%");
 		$(".sticky-top").css("z-index", "0");
