@@ -39,6 +39,7 @@ window.onload = function(){
 
 		});
 	};
+
 	if(windowWidth < 768){	// if page loads as mobile add primary color;
 		uiChange();
 	};
@@ -90,10 +91,10 @@ window.onload = function(){
 			};
 		}
 
-		if (scrollTop >= offsetVal && windowWidth > 768) {
+		if (scrollTop >= 75 && windowWidth > 768) {
 			uiChange();
 		} else if(windowWidth > 768){
-		    uiReset();
+		  uiReset();
 		}
 	};
 
