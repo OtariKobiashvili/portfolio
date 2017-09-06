@@ -81,7 +81,31 @@ hr.title-hr {
 	top: 0px;
 	right: .5px;
 }
-
+/* //////////Nav-toggler-animation///////////// */
+.menu-btn {
+  display: block;
+  width: 26px;
+}
+.menu-btn:before,
+.menu-btn:after {
+	background-color: rgba(255,255,255,.8);
+	border-radius: 5px;
+  content: '';
+  display: block;
+  height: 2px;
+  transition: all 200ms ease-in-out;
+}
+.menu-btn:before {
+  box-shadow: 0 8px 0 rgba(255,255,255,.8);
+  margin-bottom: 14px;
+}
+.menu-btn.open-nav:before {
+  box-shadow: 0 0 0 rgba(255,255,255,.8);
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-btn.open-nav:after{
+  transform: translateY(-6px) rotate(-45deg);
+}
 /*//////////////////LANDING //////////////////////*/
 .jumbotron {
 	margin-top: -75px;
@@ -633,7 +657,7 @@ footer p{
 		border: 0;
 	}
 	.contact-info {
-		margin-top: 50px;
+		margin-top: 57.5px;
 	}
 }
 @media screen and (max-width: 767px) {

@@ -1,12 +1,19 @@
 'use strict';
+//on reload bring page view back to top
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 };
 
+//after dom is ready to manipulate
 window.onload = function(){
-
+	//fade body in on laod
 	$('body').css('display', 'none');
 	$('body').fadeIn(1500);
+
+	//hamburger animation
+	$(".navbar-toggler").click(function(){
+		$(".menu-btn").toggleClass("open-nav");
+	});
 
 	var navbar = document.querySelector(".navbar"),
 			jumbotron = document.querySelector(".jumbotron"),
@@ -36,15 +43,16 @@ window.onload = function(){
 			$(this).css("color","rgba(255, 255, 255,.75)");
 		},function(){
 			$(this).css("color","white");
-
 		});
 	};
 
-	if(windowWidth < 768){	// if page loads as mobile add primary color;
+	if(windowWidth < 768){
+		// if page loads as mobile add primary color;
 		uiChange();
 	};
 
-	window.onresize = function(){	//check screen size, if mobile, add primary color, if screen size changes to a large enough px count, fadeout navbar execute as normal
+	window.onresize = function(){
+		//check screen size, if mobile, add primary color, if screen size changes to a large enough px count, fadeout navbar execute as normal
 		var windowWidth = document.documentElement.clientWidth,
 				jumboHeight = getComputedStyle(jumbotron).height.split('px')[0],
 				offsetVal = jumboHeight - (navbarHeight),
