@@ -125,17 +125,17 @@ hr.title-hr {
   height: 140px;
   margin-top: 23.5%;
   transform: translateY(-50%);
-	text-shadow : 1.2px 1.2px black;
+	text-shadow : .3px .3px black;
 }
 .hero-text h1, .hero-text h2{
-	font-size: 3rem;
+	font-size: 4rem;
 	font-weight: 300;
 	line-height: 1.1;
 	margin-bottom: 0;
 }
 .typed-cursor {
 	animation: blink 1s step-end infinite;
-	font-size: 2.75rem;
+	font-size: 3.75rem;
 	opacity: 1;
 	position: relative;
 	right: 5px;
@@ -675,6 +675,14 @@ footer p{
 @media screen and (min-width: 991px){
 	.form-group textarea {
 		max-width: 65%;
+	}
+}
+@media screen and (max-width: 991px){
+	.hero-text h1, .hero-text h2{
+		font-size: 3rem;
+	}
+	.typed-cursor {
+		font-size: 2.75rem;
 	}
 }
 @media screen and (min-width: 767px){
