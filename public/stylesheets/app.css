@@ -22,7 +22,7 @@ hr.title-hr {
 /*///////////////NAV BAR/////////////////*/
 .active {
 	background-color: rgb(82,101,143);
-	border-radius: 4px;
+	border-radius: 1px;
 	transition: .3s;
 }
 .navbar {
@@ -248,15 +248,40 @@ hr.title-hr {
 }
 /*///////////////// ABOUT ///////////////////*/
 .about {
-	margin: 55px auto;
-	text-align: center;
-	line-height: 40px;
-	max-width: 450px;
+	margin: 35px auto;
+	line-height: 1.75;
+	max-width: 800px;
+	padding: 0 20px;
 }
 .section-title {
 	margin-bottom: 5px;
+	text-align: center;
 }
-
+.about .container .title-hr{
+	margin-left: 0;
+}
+.about .more-info {
+	display: inline-block;
+	margin: 0 auto;
+}
+.about .resume {
+	margin-top: 0px;
+	background: transparent;
+	border: 1px solid #333a56;
+	border-radius: 40px;
+	font-size: .8rem;
+	padding: .5rem 1rem;
+	color: #333a56;
+}
+.about .resume:focus {
+	color: white;
+}
+.about .resume:hover {
+	color: white;
+	background: #333a56;
+	border: 2px solid #333a56;
+	padding: .5rem 1rem;
+}
 /*//////////////////////////// SKILLS//////////////////*/
 
 .skills {
