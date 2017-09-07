@@ -39,6 +39,7 @@ window.onload = function(){
 
 		});
 	};
+
 	if(windowWidth < 768){	// if page loads as mobile add primary color;
 		uiChange();
 	};
@@ -90,10 +91,10 @@ window.onload = function(){
 			};
 		}
 
-		if (scrollTop >= offsetVal && windowWidth > 768) {
+		if (scrollTop >= 75 && windowWidth > 768) {
 			uiChange();
 		} else if(windowWidth > 768){
-		    uiReset();
+		  uiReset();
 		}
 	};
 
@@ -132,7 +133,7 @@ window.onload = function(){
 		$('html, body').animate({scrollTop:pos},1500);
 	});
 
-	$(".contact-msg .form-btn").on("click", function(){
+	$("#form-btn").on("click", function(){
 		var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
 		$("#myForm").css("width", "100%");
 		$(".sticky-top").css("z-index", "0");

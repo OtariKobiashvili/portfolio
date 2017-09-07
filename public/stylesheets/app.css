@@ -11,6 +11,14 @@ body {
 	right: 0;
 	left: 0;
 }
+hr.title-hr {
+	max-width: 50px;
+	margin-top: .25rem;
+	margin-bottom: .25rem;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid rgba(82,101,143,.7);
+}
 /*///////////////NAV BAR/////////////////*/
 .active {
 	background-color: rgb(82,101,143);
@@ -26,13 +34,12 @@ body {
 }
 .nav-bg {
 	background-color: #333a56;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 .nav-col {
 	color: black!important;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+  color: white;
 }
 .navbar-light .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247,245,230, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -223,7 +230,7 @@ body {
 	max-width: 450px;
 }
 .section-title {
-	margin-bottom: 25px;
+	margin-bottom: 5px;
 }
 
 /*//////////////////////////// SKILLS//////////////////*/
@@ -234,7 +241,7 @@ body {
 	background-color: #F7F5E6;
 }
 .skill {
-	font-size: 5em;
+	font-size: 4.5em;
 	position: relative;
 	margin: 0px 15px;
 }
@@ -311,6 +318,10 @@ body {
 }
 .portfolio h1 {
 	margin: 30px 0;
+	margin-bottom: 5px;
+}
+.portfolio .title-hr {
+	margin-bottom: 1.5rem;
 }
 .card-container {
 	-webkit-perspective: 800px;
@@ -421,6 +432,7 @@ body {
 	-webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.3);
 	box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.3);
+	margin-top: -3px;
 }
 /*//////////////////////////CONTACT//////////////*/
 .contact {
@@ -428,6 +440,13 @@ body {
 	padding: 5px 0;
 	padding-bottom: 20px;
 	background-color: #F7F5E6;
+}
+.contact .container hr {
+	border: 1px solid rgba(82,101,143,.7);
+	max-width: 175px;
+}
+.contact p {
+	font-size: .85rem;
 }
 .form-wrapper {
 	height: 100%;
@@ -528,12 +547,13 @@ textarea:-ms-input-placeholder {
 }
 .contact h1{
 		margin: 30px 0;
+		margin-bottom: 5px;
 }
-.contact .container .row .col-sm-12 img {
+#profile-image {
 	margin: 15px 0;
-	width: 225px;
-	height: 225px;
-	border-radius: 59%;
+	width: 275px;
+	height: 275px;
+	border-radius: 50%;
 	filter: grayscale(15%);
 	-webkit-filter: grayscale(15%);
 	-moz-filter: grayscale(15%);
@@ -541,9 +561,6 @@ textarea:-ms-input-placeholder {
 	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .5);
 	-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .5);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .5);
-}
-.contact-msg p{
-	font-size: .85em;
 }
 .form-btn {
 	background-color: transparent;
@@ -559,6 +576,9 @@ textarea:-ms-input-placeholder {
 	background: #333a56;
 	border: 2px solid #333a56;
 	padding: .60rem 2.0rem;
+}
+.contact-info{
+	margin-top: 35px;
 }
 .contact-info a i{
 	color: black;
@@ -606,6 +626,14 @@ footer p{
 @media screen and (min-width: 991px){
 	.form-group textarea {
 		max-width: 65%;
+	}
+}
+@media screen and (min-width: 767px){
+	.contact .container hr:first-of-type {
+		border: 0;
+	}
+	.contact-info {
+		margin-top: 50px;
 	}
 }
 @media screen and (max-width: 767px) {
