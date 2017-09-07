@@ -68,7 +68,7 @@ window.onload = function(){
 	function navChange(){
 		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
 				windowWidth = document.documentElement.clientWidth,//check to see if user is mobile, disable navbar fadein
-				aboutHeight = $(".about .section-title").offset().top - 55,//.about margin
+				aboutHeight = $(".about .section-title").offset().top - 30,//.about margin
 				skillsHeight = $(".skills .skill-title").offset().top - 30,
 				portfHeight = $(".portfolio .portf-title").offset().top - 30,
 				contactHeight = $(".contact .contact-title").offset().top - 30;
@@ -133,9 +133,9 @@ window.onload = function(){
 				pos;
 
 		if (navVal === "about"){
-			pos =  navDiv.offset().top;
+			pos =  navDiv.offset().top -65;
 		} else {
-			pos =	navDiv.offset().top + 25;
+			pos =	navDiv.offset().top -35;
 		}
 
 		$('html, body').animate({scrollTop:pos},1500);
