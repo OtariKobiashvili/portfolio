@@ -122,7 +122,14 @@ window.onload = function(){
 	//scroll effect 1
 	$(".learn-scroll").on("click", function(){
 		var div = $("#about"),
-				pos = div.offset().top;
+				pos = div.offset().top - 65;
+
+		$('html, body').animate({scrollTop:pos},1500);
+	});
+
+	$(".navbar-brand").on("click", function(){
+		var navTo = $("#hero"),
+				pos = navTo.offset().top;
 
 		$('html, body').animate({scrollTop:pos},1500);
 	});
