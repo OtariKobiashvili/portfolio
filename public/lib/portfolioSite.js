@@ -1,9 +1,11 @@
 'use strict';
+
 //on reload bring page view back to top
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 };
 $('body').css('display', 'none');
+
 //after dom is ready to manipulate
 window.onload = function(){
 	//fade body in on laod

@@ -467,6 +467,10 @@ hr.title-hr {
 	transform: rotateY( 180deg );
 	z-index: 3;
 }
+.card-back .proj-info {
+	font-size: 90%;
+	line-height: 1.6;
+}
 .card-front, .card-back {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
