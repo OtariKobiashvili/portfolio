@@ -3,11 +3,11 @@
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 };
-
+$('body').css('display', 'none');
 //after dom is ready to manipulate
 window.onload = function(){
 	//fade body in on laod
-	$('body').css('display', 'none');
+
 	$('body').fadeIn(1500);
 
 	//hamburger animation
