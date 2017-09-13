@@ -14,7 +14,12 @@ window.onload = function(){
 
 	//hamburger animation
 	$(".navbar-toggler").click(function(){
-		$(".menu-btn").toggleClass("open-nav");
+		var navbarCollapse = $("#navbarSupportedContent");
+		if(!navbarCollapse.hasClass("collapsing")){
+			$(".menu-btn").toggleClass("open-nav");
+		} else if(navbarCollapse.hasClass("collapsings")){
+			$(".menu-btn").toggleClass("open-nav");
+		}
 	});
 
 	var navbar = document.querySelector(".navbar"),
