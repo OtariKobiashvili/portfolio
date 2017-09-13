@@ -21,6 +21,13 @@ window.onload = function(){
 			$(".menu-btn").toggleClass("open-nav");
 		}
 	});
+	//image lazy load
+	var bLazy = new Blazy({
+		offset: 150,
+		success: function(e){
+			$(".jumbotron").css("background-image", 'linear-gradient(to bottom, transparent, rgba(0,0,0,.8)), url("/images/office.jpg")');
+		}
+	});
 
 	var navbar = document.querySelector(".navbar"),
 			jumbotron = document.querySelector(".jumbotron"),
