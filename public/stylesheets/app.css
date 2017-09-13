@@ -777,9 +777,14 @@ footer p{
 		margin-bottom: 190px;
 	}
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
 	.card-container {
-		margin-bottom: 125px;
+		margin-bottom: 120px;
+	}
+}
+@media screen and (max-width: 430px) {
+	.card-container {
+		margin-bottom: 70px;
 	}
 }
 @media screen and (max-width: 325px) {
@@ -788,6 +793,9 @@ footer p{
 	}
 	.resume {
 		margin-top: -80px;
+	}
+	.card-container {
+		margin-bottom: 30px;
 	}
 }
 
