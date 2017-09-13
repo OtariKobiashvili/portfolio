@@ -199,9 +199,9 @@ hr.title-hr {
 	font-size: .95rem;
 	cursor: pointer;
 	margin: 0 auto;
-	max-width: 200px;
+	max-width: 210px;
 	position: absolute;
-	top: 87%;
+	top: 90%;
 	left: 0;
 	right:0;
 	text-align: center;
@@ -732,6 +732,7 @@ footer p{
 		border-left: 0px;
 	}
 	.hero-text {
+		max-height: 100px;
 		margin-top: 35%;
 	}
 	.hero-text h1, .hero-text h2{
@@ -777,7 +778,7 @@ footer p{
 		margin-top: -50px;
 	}
 	.hero-text {
-			margin-top: 50%;
+			margin-top: 55%;
 			max-height: 80px;
 	}
 	.hero-text h1, .hero-text h2{
@@ -795,7 +796,7 @@ footer p{
 		max-width: 100%;
 	}
 	.learn-scroll {
-		top: 85%;
+		top: 91%;
 	}
 	.about .container p:not(.small) {
 		font-size: 88%;
