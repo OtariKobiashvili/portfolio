@@ -1,28 +1,27 @@
 <% include partials/header%>
+  <header>
+    <div class = "jumbotron text-center" id="hero">
+      <div class = "hero-text">
+        <h1>Hi, I'm Otari.</h1>
+        <h2 id = "hero-message"><span></span></h2>
+      </div>
 
-  <div class = "jumbotron text-center" id="hero">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/otari-kobiashvili-b0492692/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a href="https://github.com/OtariKobiashvili" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+        <a href ="/resume.pdf" target="_blank" title="Resume"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+        <a href="https://codepen.io/OtariKobiashvili/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+        <a href="https://www.freecodecamp.com/otarikobiashvili" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+      </div>
 
-		<div class = "hero-text">
-			<h1>Hi, I'm Otari.</h1>
-			<h2 id = "hero-message"><span></span></h2>
-		</div>
-
-    <div>
-      <a class = "resume btn btn-primary" href ="/resume.pdf" target="_blank">
-        Resume
-      </a>
-    </div>
-
-    <div class = "learn-scroll">
-      <a href="#about">
-        <p>Learn more about what I do</p>
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </a>
-    </div>
-
-	</div>
-
-
+      <div class = "learn-scroll">
+        <a href="#about">
+          <p>Learn more about what I do</p>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+	  </div>
+  </header>
 
   <section class = "about" id="about">
     <h1 class = "section-title">ABOUT ME</h1>
@@ -37,27 +36,25 @@
         </p>
         <p>
           I enjoy building responsive interfaces with HTML, CSS and Javascript using the latest UI frameworks and techniques,
-          and with a good eye for detail. I strive in busy, fast-paced environments and keep up to date with the current technology trends.
+          and with a good eye for detail. I strive in busy, fast-paced environments and keep up to date with current technology trends.
         </p>
         <h5 class="text-left">Personal</h5>
         <hr class="title-hr">
         <p>
           When I'm away from the computer, I enjoy reading, playing pick-up basketball, as well as watching professional basketball,
-          and I'm and avid gamer.
+          and I'm an avid gamer.
         </p>
         <div class="more-info text-center">
-            <h5 class="text-left">Want to learn more about me?</h5>
-            <hr class="title-hr">
-            <p class="small text-left">Click <a href="/resume.pdf">here</a> for a pdf of my most current resume.</p>
-          </div>
+          <h5 class="text-left">Want to learn more about me?</h5>
+          <hr class="title-hr">
+          <p class="small text-left">Click <a href="/resume.pdf">here</a> for a pdf of my most current resume.</p>
+        </div>
     </div>
   </section>
 
-
-
   <section class = "skills" id="skills">
     <h1 class = "skill-title">SKILLS</h1>
-    <hr>
+    <hr class="title-hr">
     <p class="text-muted">Languages, Frameworks, & Libraries</p>
     <div class = "skill-logos container">
 
@@ -100,7 +97,10 @@
         <div class="col-12 dev learning">
           <h3>LEARNING</h3>
           <hr>
-          <p class="text-muted small">I'm always learning new things. Here's what I'm focusing on now:</p>
+          <p class="text-muted small">
+            I'm always learning new things.<br>
+            Here's what I'm focusing on now:
+          </p>
           <div class="type">
             <i class="skill devicon-react-original-wordmark colored"></i>
             <i class="skill devicon-webpack-plain-wordmark colored"></i>
@@ -116,7 +116,8 @@
     <hr class="title-hr">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -124,15 +125,18 @@
                 <div class="card-body">
                   <h3 class="card-title">City Hauling</h3>
                   <hr>
-                  <span class="tag">HTML5</span>
-                  <span class="tag">CSS3</span>
+                  <span class="tag">EJS</span>
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
-                  <span class="tag">JQuery</span>
+                  <span class="tag">AJAX</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">Sequelize</span>
+                  <span class="tag">PostgreSQL</span>
                 </div>
                 <div class="card-footer">
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="http://cityhauling.co" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -140,11 +144,13 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    City Hauling is a junk hauling company based in Queens, New York.
+                    We worked to completely refactor the website to a more modern responsive design,
+                    add the ability for the client to manage all bookings through one easy to use Admin UI on their mobile phone,
+                    and created a database for the client to keep track of all their users information.
+                    Currently a work in progress.
                   </p>
-                  <p><a href="cityhauling.co" target="_blank">cityhauling.co</a></p>
+                  <p><a href="http://cityhauling.co" target="_blank">cityhauling.co</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -153,7 +159,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -162,16 +169,19 @@
                   <h3 class="card-title">YelpCamp</h3>
                   <hr>
                   <span class="tag">EJS</span>
+                  <span class="tag">Bootstrap</span>
+                  <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">AJAX</span>
                   <span class="tag">Node.js</span>
                   <span class="tag">Express</span>
                   <span class="tag">MongoDB</span>
                   <span class="tag">Mongoose</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/yelp_camp" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://yelpcamp-otari.herokuapp.com/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -179,12 +189,11 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    YelpCamp is a fullstack web application built using the tools provided by node.js, express, and mongoose. Features include the ability to
+                    view all user submitted campgrounds, create an account, edit your profile, add your own campground, leave comments, and rate campgrounds.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/yelp_camp" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://yelpcamp-otari.herokuapp.com/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -193,7 +202,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -206,11 +216,12 @@
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/simon_game" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/simon_game/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -218,12 +229,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    Reimagining of the <a href="https://en.wikipedia.org/wiki/Simon_Says" target="_blank">Simon Says</a> kids game.
+                    Play the classic on your web browser. Built using two arrays as data structures to represent the random CPU moves,
+                    and the players choices. Includes a strict mode, where if you get one move wrong, you start over.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/simon_game" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/simon_game/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -232,24 +243,26 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
                 <img class="card-img-top" src="/images/tictactoe.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <h3 class="card-title">TicTacToe</h3>
+                  <h3 class="card-title">Tic Tac Toe</h3>
                   <hr>
                   <span class="tag">HTML5</span>
                   <span class="tag">CSS3</span>
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/tic_tac_toe" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/tic_tac_toe/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -257,12 +270,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    Basic <a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">Tic Tac Toe</a> game, where you can choose to be X or O, and play
+                    against the computer. Built using the minmax algorithm to allow the computer to test all possible moves, and filter them to pick the best possible
+                    move available, based on a score it assigns to all the tested moves.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/tic_tac_toe" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/tic_tac_toe/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -271,7 +284,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -284,11 +298,12 @@
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/pomodoro" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/pomodoro/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -296,12 +311,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    Web application built to emulate the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="blank">pomodoro technique</a> time management method.
+                    You can set your work time, and break time, and then start the clock, and it will count down to zero, alert you, then automatically
+                    begin the next iteration of work, or play, depending on what was prior.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/pomodoro" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/pomodoro/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -310,24 +325,26 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
                 <img class="card-img-top" src="/images/calc.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <h3 class="card-title">JavaScript Calculator</h3>
+                  <h3 class="card-title">JS Calculator</h3>
                   <hr>
                   <span class="tag">HTML5</span>
                   <span class="tag">CSS3</span>
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/javascript-calculator" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/javascript-calculator/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -335,12 +352,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    A basic calculator built using Javascript/Jquery. Works by pushing the number on the calculator screen in to
+                    a entries array, when an operator is clicked, and pushing that operator in to the same array, then looping through
+                    that array and building up a final number.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/javascript-calculator" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/javascript-calculator/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -349,7 +366,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -362,11 +380,13 @@
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
+                  <span class="tag">AJAX</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/twitch-api" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/twitch-api/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -374,12 +394,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    A Twitch online viewer built using the <a href="https://dev.twitch.tv/api" target="_blank">Twitct API</a>. Includes an array of
+                    usernames that is queried in to the API, and with the response, builds a simple viewer that shows you if a user is
+                    online. Users that are online will include what they are currently streaming.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/twitch-api" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/twitch-api/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -388,7 +408,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <div class="col-md-6">
           <div class="card-container manual-flip">
             <div class="card">
               <div class="card-front">
@@ -401,11 +422,13 @@
                   <span class="tag">Bootstrap</span>
                   <span class="tag">Javascript</span>
                   <span class="tag">JQuery</span>
+                  <span class="tag">Responsive</span>
+                  <span class="tag">AJAX</span>
                 </div>
                 <div class="card-footer">
-                  <a href="#" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                  <a href="https://github.com/OtariKobiashvili/wikipedia_viewer" target="_blank" class="btn btn-sm btn-primary" title="See on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
                   <button class="btn btn-sm btn-primary card-flip">About</button>
-                  <a href="#" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+                  <a href="https://otarikobiashvili.github.io/wikipedia_viewer/" target="_blank" class="btn btn-sm btn-primary" title="See Demo"><i class="fa fa-laptop" aria-hidden="true"></i></a>
                 </div>
               </div>
               <div class="card-back">
@@ -413,12 +436,12 @@
                   <h4 class="card-title">About this project</h4>
                   <hr>
                   <p class="proj-info">
-                    You're telling the enemy exactly what you're going to do.
-                    No wonder you've been fighting Lorem Ipsum your entire adult life.
-                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things.
+                    Developed using the <a href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank">Wikipedia API</a>, this is a simple
+                    Wikipedia viewer that enables you to search through Wikipedia pages, and open a random page. Works by sending your search to
+                    the API as a request, and uses the response to append to the html on the page.
                   </p>
-                  <p><a href="#">View Github Repository</a></p>
-                  <p><a href="#">See Live Demo</a></p>
+                  <p><a href="https://github.com/OtariKobiashvili/wikipedia_viewer" target="_blank">View Github Repository</a></p>
+                  <p><a href="https://otarikobiashvili.github.io/wikipedia_viewer/" target="_blank">See Live Demo</a></p>
                 </div>
                 <div class="card-footer text-left">
                   <button class="btn btn-sm btn-primary card-flip">Back</button>
@@ -426,6 +449,10 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="col-12 text-center small">
+          <p>See more on <a href="https://github.com/OtariKobiashvili" target="_blank">GitHub</a></p>
         </div>
       </div>
     </div>
@@ -544,6 +571,4 @@
       </div>
     </div>
   </section>
-
 <% include partials/footer%>
-

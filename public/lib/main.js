@@ -1,18 +1,25 @@
 'use strict';
+
 //on reload bring page view back to top
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0);
 };
+$('body').css('display', 'none');
 
 //after dom is ready to manipulate
 window.onload = function(){
 	//fade body in on laod
-	$('body').css('display', 'none');
+
 	$('body').fadeIn(1500);
 
 	//hamburger animation
 	$(".navbar-toggler").click(function(){
-		$(".menu-btn").toggleClass("open-nav");
+		var navbarCollapse = $("#navbarSupportedContent");
+		if(!navbarCollapse.hasClass("collapsing")){
+			$(".menu-btn").toggleClass("open-nav");
+		} else if(navbarCollapse.hasClass("collapsings")){
+			$(".menu-btn").toggleClass("open-nav");
+		}
 	});
 
 	var navbar = document.querySelector(".navbar"),
@@ -68,10 +75,10 @@ window.onload = function(){
 	function navChange(){
 		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
 				windowWidth = document.documentElement.clientWidth,//check to see if user is mobile, disable navbar fadein
-				aboutHeight = $(".about .section-title").offset().top - 30,//.about margin
-				skillsHeight = $(".skills .skill-title").offset().top - 30,
-				portfHeight = $(".portfolio .portf-title").offset().top - 30,
-				contactHeight = $(".contact .contact-title").offset().top - 30;
+				aboutHeight = $(".about .section-title").offset().top - 85,//.about margin
+				skillsHeight = $(".skills .skill-title").offset().top - 85,
+				portfHeight = $(".portfolio .portf-title").offset().top - 85,
+				contactHeight = $(".contact .contact-title").offset().top - 85;
 
 		if($(".navbar").hasClass("nav-bg")){
 			if( scrollTop > aboutHeight){
@@ -98,7 +105,6 @@ window.onload = function(){
 				$("#contact-nav").removeClass("active");
 			};
 		}
-
 		if (scrollTop >= 75 && windowWidth > 768) {
 			uiChange();
 		} else if(windowWidth > 768){
@@ -110,7 +116,7 @@ window.onload = function(){
 
 	//typing effect on hero message
 	var typed = new Typed("#hero-message span", {
-		strings: ["I'm a web developer.", "I'm self-taught."],
+		strings: ["I'm a web developer.", "I'm self-taught.", "I'm available for hire."],
 		typeSpeed: 90,
 		backSpeed: 50,
 		backDelay: 1000,
@@ -119,7 +125,6 @@ window.onload = function(){
 		loopCount: false
 	});
 
-	//scroll effect 1
 	$(".learn-scroll").on("click", function(){
 		var div = $("#about"),
 				pos = div.offset().top - 65;
