@@ -130,7 +130,7 @@ hr.title-hr {
 	text-shadow : .3px .3px black;
 }
 .hero-text h1, .hero-text h2{
-	font-size: 3.75rem;
+	font-size: 3.5rem;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-weight: 300;
 	line-height: 1.1;
@@ -138,7 +138,7 @@ hr.title-hr {
 }
 .typed-cursor {
 	animation: blink 1s step-end infinite;
-	font-size: 3.5rem;
+	font-size: 3.25rem;
 	opacity: 1;
 	position: relative;
 	right: 5px;
@@ -777,7 +777,8 @@ footer p{
 		margin-top: -50px;
 	}
 	.hero-text {
-			margin-top: 60%;
+			margin-top: 50%;
+			max-height: 80px;
 	}
 	.hero-text h1, .hero-text h2{
 		font-size: 1.85rem;
@@ -794,7 +795,7 @@ footer p{
 		max-width: 100%;
 	}
 	.learn-scroll {
-		top: 80%;
+		top: 85%;
 	}
 	.about .container p:not(.small) {
 		font-size: 88%;
