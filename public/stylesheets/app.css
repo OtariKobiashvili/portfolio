@@ -52,6 +52,9 @@ hr.title-hr {
 .navbar-light .navbar-brand {
 	color: white;
 }
+.navbar-brand:hover {
+	color: white!important;
+}
 .navbar-brand {
 	max-width: 100px;
 }
