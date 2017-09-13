@@ -108,12 +108,24 @@ hr.title-hr {
 .menu-btn.open-nav:after{
   transform: translateY(-6px) rotate(-45deg);
 }
+/* /////////////////////LAZY LOADING//////////////////// */
+.b-lazy {
+	-webkit-transition: opacity 200ms ease-in-out;
+	-moz-transition: opacity 200ms ease-in-out;
+	-o-transition: opacity 200ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
+	max-width: 100%;
+	opacity: 0;
+}
+.b-lazy.b-loaded {
+	opacity: 1;
+}
 /*//////////////////LANDING //////////////////////*/
 .jumbotron {
 	margin-top: -75px;
 	border-radius: 0px;
 	position: relative;
-	background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.7)), url("/images/office.jpg");
+	background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.7)), url("/images/ph.jpg");
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -178,16 +190,16 @@ hr.title-hr {
 }
 .social-links a {
 	display: inline-block;
-	color: rgba(255,255,255,0.7);
+	color: rgba(255,255,255,0.8);
 	text-decoration: none;
 	margin: 0 4px;
 	margin-top: -10px;
 	height: 36px;
 	width: 36px;
 	font-size: 1rem;
-	line-height: 2.15;
+	line-height: 2.2;
 	background-color: rgba(0,0,0,0.1);
-	border: 1px solid rgba(255,255,255,0.7);
+	border: 1px solid rgba(255,255,255,0.8);
 	border-radius: 50px;
 	transition: all .1s ease-in-out;
 }
@@ -247,7 +259,7 @@ hr.title-hr {
 	}
 }
 .learn-scroll a {
-	color: rgba(255,255,255,.7);
+	color: rgba(255,255,255,.8);
 }
 .learn-scroll a:hover {
 	color: white;
