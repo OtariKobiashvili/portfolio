@@ -1,11 +1,9 @@
 /*body*/
-
 body {
 	-webkit-font-smoothing: antialiased;
 	color: #444444;
 	font-family: 'Montserrat', sans-serif;
 }
-
 .no-scroll {
 	position: fixed;
 	overflow-y: scroll;
@@ -841,15 +839,3 @@ footer p{
 		margin-bottom: 30px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
