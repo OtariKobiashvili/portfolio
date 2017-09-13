@@ -157,6 +157,9 @@ window.onload = function(){
 		var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop();
 		$("#myForm").css("width", "100%");
 		$(".sticky-top").css("z-index", "0");
+		setTimeout(function(){
+			$(".form-wrapper .form-close-btn").css("visibility", "visible");
+		},400);
 		if ($(document).height() > $(window).height()) {
     	$('html').addClass('no-scroll').css('top',-scrollTop);
 		};
@@ -164,6 +167,7 @@ window.onload = function(){
 
 	$(".form-close-btn").on("click", function(){
 		var scrollTop = parseInt($('html').css('top'));
+		$(".form-wrapper .form-close-btn").css("visibility", "hidden");
 		$("#myForm").css("width", "0%");
 		$('html').removeClass('no-scroll');
 		$('html,body').scrollTop(-scrollTop);
