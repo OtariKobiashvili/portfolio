@@ -17,7 +17,7 @@ window.onload = function(){
 		var navbarCollapse = $("#navbarSupportedContent");
 		if(!navbarCollapse.hasClass("collapsing")){
 			$(".menu-btn").toggleClass("open-nav");
-		} else if(navbarCollapse.hasClass("collapsings")){
+		} else if(navbarCollapse.hasClass("collapsing")){
 			$(".menu-btn").toggleClass("open-nav");
 		}
 	});
