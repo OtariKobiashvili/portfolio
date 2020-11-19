@@ -84,7 +84,6 @@ window.onload = function(){
 				windowWidth = document.documentElement.clientWidth,//check to see if user is mobile, disable navbar fadein
 				aboutHeight = $(".about .section-title").offset().top - 85,//.about margin
 				skillsHeight = $(".skills .skill-title").offset().top - 85,
-				portfHeight = $(".portfolio .portf-title").offset().top - 85,
 				contactHeight = $(".contact .contact-title").offset().top - 85;
 
 		if($(".navbar").hasClass("nav-bg")){
@@ -98,12 +97,6 @@ window.onload = function(){
 				$("#skills-nav").addClass("active");
 			} else{
 				$("#skills-nav").removeClass("active");
-			};
-			if(scrollTop > portfHeight){
-				$(".nav-link").removeClass("active");
-				$("#portf-nav").addClass("active");
-			} else{
-				$("#portf-nav").removeClass("active");
 			};
 			if(scrollTop > contactHeight){
 				$(".nav-link").removeClass("active");
@@ -123,12 +116,12 @@ window.onload = function(){
 
 	//typing effect on hero message
 	var typed = new Typed("#hero-message span", {
-		strings: ["I'm a web developer.", "I'm self-taught.", "I'm available for hire."],
+		strings: ["I'm a web developer."],
 		typeSpeed: 90,
 		backSpeed: 50,
 		backDelay: 1000,
 		smartBackspace: true,
-		loop: true,
+		loop: false,
 		loopCount: false
 	});
 
@@ -183,7 +176,6 @@ window.onload = function(){
 
 	$(".card-flip").on("click", function() {
 		var card = $(this).closest(".card-container");
-		console.log(card);
 		if(card.hasClass("hover")){
 			card.removeClass("hover");
 		} else {
